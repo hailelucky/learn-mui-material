@@ -6,6 +6,7 @@ import {
   ListItemIcon,
   ListItemText,
   Switch,
+  PaletteMode,
 } from "@mui/material";
 import React from "react";
 import {
@@ -17,7 +18,12 @@ import {
   ModeNight,
 } from "@mui/icons-material";
 
-export const SideBar = ({ mode, setMode }) => {
+interface Props {
+  mode: PaletteMode;
+  setMode: (a: PaletteMode) => void;
+}
+
+export const SideBar = ({ mode, setMode }: Props) => {
   const list = [
     {
       icon: <Home />,
